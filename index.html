@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- Enlaces a los archivos CSS
+	-En el primero están todos los estilos que utiliza Bootstrap (mirar documentación de Bootstrap en http://getbootstrap.com/css/)
+	-El segundo es el archivo CSS que utilizaremos nosotros para customizar los estilos si nos hace falta (podemos añadir mas dividiendolo en componentes como nos ha dicho Lucas)
+-->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+
+<!-- 
+	Enlaces a los archivos JavaScript
+	-El primero es el archivo de JQuery
+	-El segundo es el archivo de JavaScript que utiliza Bootstrap
+	-El tercero es el que utilizaremos nosotros para añadirle funcionalidades a la página
+-->
+	<script src="./js/jquery-1.10.2.min.js" defer></script>
+	<script src="./js/bootstrap.min.js" defer></script>
+	<script src="./js/index.js" defer></script>
+
+	<title>proyectoIndustria</title>
+</head>
+<body>
+
+	<header>
+	<!--
+	Cabecera de la página. Dos componentes (por el momento):
+		-Una Navbar
+		-Un Jumbotron
+	-->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- 
+			Las clases son las que utiliza Bootstrap para identificar una barra de navegación y añadirle los estilos que tiene asignados para este fin:
+				-navbar: le aplica los estilos generales para una barra de navegación
+				-navbar-default: es el tipo de barra de navegación (hay otros que te ponen el fondo negro y mas chorradillas)
+				-navbar-fixed-top: para que se mantenga fija en el tope de la página
+			La parte de role="navigation" es para que un navegador que no soporte HTML5 y por tanto no sepa lo que es <nav> identifique el propósito de la etiqueta
+			http://getbootstrap.com/components/#navbar
+			-->
+		  <div class="container">
+			<!--
+			http://getbootstrap.com/css/#overview-container
+			-->
+		    <ul class="nav navbar-nav">
+		    	<!-- 
+				Aquí van los botones de la barra de navegación. Las clases funcionan de forma similar a las anteriores dando estilo para su función
+		    	-->
+		    	<li><a href="#">Link 1</a></li>
+		    	<li><a href="#">Link 2</a></li>
+		    	<li><a href="#">Link 3</a></li>
+		    </ul>
+		  </div>
+		</nav>
+
+		<div class="jumbotron">
+			<!-- 
+			Info sobre el Jumbotron: http://getbootstrap.com/components/#jumbotron
+			-->
+		  <h1>Hello, world!</h1>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit labore quo, culpa, esse dolorem eligendi vero sit tempore dignissimos cumque, ad aliquam fugiat dolore odio nihil repellendus explicabo dicta consequatur.</p>
+		  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+		</div>
+
+	</header>
+
+	<section>
+		<div class="progress">
+			<!--
+			Una barra de progreso: http://getbootstrap.com/components/#progress-animated
+			-->
+		  <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+		    <span class="sr-only">45% Complete</span>
+		  </div>
+		</div>
+
+	</section>	
+
+	<footer>
+		
+	</footer>
+</body>
+</html>
