@@ -24,60 +24,41 @@
 <body>
 
 	<header>
-	<!--
-	Cabecera de la página. Dos componentes (por el momento):
-		-Una Navbar
-		-Un Jumbotron
-	-->
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<!-- 
-			Las clases son las que utiliza Bootstrap para identificar una barra de navegación y añadirle los estilos que tiene asignados para este fin:
-				-navbar: le aplica los estilos generales para una barra de navegación
-				-navbar-default: es el tipo de barra de navegación (hay otros que te ponen el fondo negro y mas chorradillas)
-				-navbar-fixed-top: para que se mantenga fija en el tope de la página
-			La parte de role="navigation" es para que un navegador que no soporte HTML5 y por tanto no sepa lo que es <nav> identifique el propósito de la etiqueta
-			http://getbootstrap.com/components/#navbar
-			-->
-		  <div class="container">
-			<!--
-			http://getbootstrap.com/css/#overview-container
-			-->
-		    <ul class="nav navbar-nav">
-		    	<!-- 
-				Aquí van los botones de la barra de navegación. Las clases funcionan de forma similar a las anteriores dando estilo para su función
-		    	-->
-		    	<li><a href="#">Link 1</a></li>
-		    	<li><a href="#">Link 2</a></li>
-		    	<li><a href="#">Link 3</a></li>
-		    </ul>
-		  </div>
-		</nav>
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+				</ul>
+			</div>
 
-		<div class="jumbotron">
-			<!-- 
-			Info sobre el Jumbotron: http://getbootstrap.com/components/#jumbotron
-			-->
+		</nav>
+		<div class="row">
+		<div class="jumbotron col-md-8 col-md-offset-2">
 		  <h1>Hello, world!</h1>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit labore quo, culpa, esse dolorem eligendi vero sit tempore dignissimos cumque, ad aliquam fugiat dolore odio nihil repellendus explicabo dicta consequatur.</p>
+		  <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nulla illum neque magnam accusantium omnis, et sit cupiditate culpa, harum, quaerat! Nostrum aut voluptatum magni explicabo enim eaque consectetur consequuntur!</span><span>Magnam quam in saepe itaque possimus magni iste necessitatibus, quibusdam iure temporibus dignissimos distinctio debitis ducimus doloremque nobis, delectus, amet rerum consectetur tempore quia a? Ea porro accusamus amet voluptatibus?</span></p>
 		  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+		</div>
 		</div>
 
 	</header>
 
 	<section>
-		<div class="progress">
-			<!--
-			Una barra de progreso: http://getbootstrap.com/components/#progress-animated
-			-->
-		  <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-		    <span class="sr-only">45% Complete</span>
-		  </div>
-		</div>
 
 	</section>	
 
 	<footer>
-		
+	
 	</footer>
 </body>
 </html>
+
