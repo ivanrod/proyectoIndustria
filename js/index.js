@@ -15,7 +15,7 @@ function newRecipe(title, img, description){
 
 	};
 	Recipe.init(title, img, description)
-	return Recipe
+	return Recipe;
 };
 
 /* ----Meal, Vegetarian, Dessert recipes (arrays)-----
@@ -71,7 +71,6 @@ recipeId: string  --> recipe div id
 recipeObject: Recipe --> Recipe Object 
 */
 function changeRecipe(recipeId, recipeObject){
-	'use strict';
 	var container = document.getElementById(recipeId);
 	//Title
 	container.children[1].children[0].textContent = recipeObject.title;
@@ -87,7 +86,6 @@ function changeRecipe(recipeId, recipeObject){
 Changes the three recipe containers 
 */
 function threeRecipes(){
-	'use strict';
 	var recipesType = mealRecipes;
 	if (this.id === 'carnivorosButton'){recipesType = mealRecipes}
 		else if(this.id === 'vegetarianosButton') {recipesType = vegetarianRecipes}
@@ -113,6 +111,8 @@ threeRecipes();
 
 /*Scroll Down JQuery (pasar a JS)*/
 	$(document).ready(function(){
+
+
 		$( '.searchbychar' ).on('click', function(event) {
 		    event.preventDefault();
 		    var target = "#" + $(this).data('target');
