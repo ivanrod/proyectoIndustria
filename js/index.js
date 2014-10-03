@@ -71,6 +71,7 @@ recipeId: string  --> recipe div id
 recipeObject: Recipe --> Recipe Object 
 */
 function changeRecipe(recipeId, recipeObject){
+	'use strict';
 	var container = document.getElementById(recipeId);
 	//Title
 	container.children[1].children[0].textContent = recipeObject.title;
@@ -86,13 +87,13 @@ function changeRecipe(recipeId, recipeObject){
 Changes the three recipe containers 
 */
 function threeRecipes(){
+	'use strict';
 	var recipesType = mealRecipes;
 	if (this.id === 'carnivorosButton'){recipesType = mealRecipes}
 		else if(this.id === 'vegetarianosButton') {recipesType = vegetarianRecipes}
 			else if (this.id === 'golosonesButton') {recipesType = dessertRecipes};
 	for (i = 0; i < 3; i++) {
-		console.log('recipe' + (i+1), recipesType[i]);
-			changeRecipe('recipe' + (i+1), recipesType[i]) ;
+		changeRecipe('recipe' + (i+1), recipesType[i]) ;
 		};
 	};
 
@@ -106,6 +107,24 @@ document.getElementById("golosonesButton").addEventListener("click", threeRecipe
 threeRecipes();
 
 
+
+
+
+
+/*Scroll Down JQuery (pasar a JS)*/
+	$(document).ready(function(){
+		$( '.searchbychar' ).on('click', function(event) {
+		    event.preventDefault();
+		    var target = "#" + $(this).data('target');
+		    $('html, body').animate({
+		        scrollTop: $(target).offset().top
+		    }, 2000);
+		});
+
+	});
+
+
+/*PRUEBAS*/
 //document.getElementById("clicker1").addEventListener("click", scrollDown);
 
 function scrollDown(){
