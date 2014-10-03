@@ -1,0 +1,41 @@
+/*Definimos el border-box en todo el html y le decimos que lo herede para el resto de etiquetas
+De esta forma conseguimos que toda la página tenga esta propiedad a excepción de widgets externos que no tengan en cuenta esta propiedad en cuenta*/
+html{
+	box-sizing: border-box;	
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+/*ClearFix: limpia los floats
+ Se utiliza sobre el elemento padre, p.ej: en ul si queremos usarlo sobre li's;
+*/
+.cf:before, .cf:after{
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+/*Centrado vertical: Para centrar un elemento verticalmente
+IMPORTANTE: no machacar el position:relative;
+*/
+.centVert {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ====== media ====== 
+Para hacer las típicas estructuras de foto/comentario
+media: es la clase que contiene toda la estructura foto/comentario;
+img: es la clase de un anchor que contiene una imagen ;
+bd: es la parte de comentarios
+imgExt: para colocar las fotos en la derecha añadiendo esta clase al anchor que la contiene;
+*/
+.media {margin:10px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;margin-right:0;}

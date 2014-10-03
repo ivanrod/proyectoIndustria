@@ -1,0 +1,45 @@
+@media(min-width:768px) {
+    .jumbotronHeader {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }}
+
+ /*Header Section
+ */
+.headerContainer{
+	text-align: center;
+}
+
+/*WeAre Section
+Temporal*/
+.weAre{
+	padding-top: 300px;
+	padding-bottom: 200px;
+}
+
+/*Recipes section
+
+*/
+.dayRecipes{
+	text-align: center;
+	display: block;
+	margin: auto;
+	width:25%;
+	border: solid;
+	border-radius: 20px;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+/*Contact
+*/
+.contact {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 100px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
