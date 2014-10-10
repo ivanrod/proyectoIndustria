@@ -43,3 +43,31 @@ Temporal*/
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
 }
+
+#myListRecipe {
+	display:inline-block;
+	padding: 0px 0px 50px 40px; 
+}
+
+.timesRecipe {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.makeRecipe {
+	text-align: center;
+}
+
+.likeClick{
+	margin-left: 120px;
+}
+
+#myRecipeTittle {
+	text-align: center;
+
+}
+
+.eggs {
+	width: 250px;
+	height: 220px;
+}
