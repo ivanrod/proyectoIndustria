@@ -31,18 +31,10 @@ Temporal*/
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-
-
-/*Contact
-*/
-.contact {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	margin-top: 100px;
-	color: #777;
-	text-align: center;
-	border-top: 1px solid #e5e5e5;
+.thumbnailImg:hover{
+	cursor: pointer;
 }
+/*Modal*/
 
 #myListRecipe {
 	display:inline-block;
@@ -71,3 +63,15 @@ Temporal*/
 	width: 250px;
 	height: 220px;
 }
+
+/*Contact
+*/
+.contact {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 100px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+

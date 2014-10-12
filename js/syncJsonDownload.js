@@ -7,6 +7,9 @@ function createCORSRequestSync(method, url) {
   var xhr = new XMLHttpRequest();
   if ("withCredentials" in xhr) {
     // XHR for Chrome/Firefox/Opera/Safari.
+    /*
+    false: Syncronous call
+    */
     xhr.open(method, url, false);
   } else if (typeof XDomainRequest != "undefined") {
     // XDomainRequest for IE.
