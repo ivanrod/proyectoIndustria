@@ -11,5 +11,6 @@ El cliente podrá seleccionar sus ingredientes y la forma de preparación del pl
 * Base de datos con todas las recetas creadas por cada usuario. Éstas podrán ser públicas o privadas.
 * Recetas recientes: En la página principal se publicarán las recetas (públicas) más recientes creadas por los usuarios, con su título, fotografía y descripción.
 * eCommerce: Gestión de pedidos de recetas. Posibilidad de monitorizar el proceso de cocinado y envío a través de un reloj y una barra de progreso.
+
 ##Finanziación
 Los ingresos serán directos a través de la venta de los platos preparados.
