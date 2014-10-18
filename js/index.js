@@ -27,7 +27,7 @@ Ahora se crean los arrays con las recetas para carnivoros, vegetarianos, etc.
 Se importan las recetas en formato JSON de forma síncrona (ver syncJsonDownload.js)
 */
 
-var Recipes = JSON.parse(makeCorsRequest());
+var Recipes = JSON.parse(makeCorsRequest("https://dl.dropboxusercontent.com/s/aj9f9i7qdc30buf/Recipes.json?dl=0"));
 var mealRecipes = Recipes.mealRecipes;
 var vegetarianRecipes = Recipes.vegetarianRecipes;
 var dessertRecipes = Recipes.dessertRecipes;

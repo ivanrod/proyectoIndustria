@@ -25,7 +25,7 @@ function createCORSRequestSync(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest(url) {
   // All HTML5 Rocks properties support CORS.
-  var url = "https://dl.dropboxusercontent.com/s/aj9f9i7qdc30buf/Recipes.json?dl=0"
+  //var url = "https://dl.dropboxusercontent.com/s/aj9f9i7qdc30buf/Recipes.json?dl=0"
   var xhr = createCORSRequestSync('GET', url);
   if (!xhr) {
     alert('CORS not supported');
