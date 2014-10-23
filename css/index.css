@@ -13,13 +13,23 @@
 /*WeAre Section
 Temporal*/
 .weAre{
-	padding-top: 300px;
+	padding-top: 20px;
 	padding-bottom: 200px;
 }
 
 /*Recipes section
 
 */
+
+.recipes{
+	padding-top: 20px;
+	
+}
+.utensilios{
+	width: 24%;
+
+	
+}
 .dayRecipes{
 	text-align: center;
 	display: block;
@@ -73,5 +83,22 @@ Temporal*/
 	color: #777;
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
+}
+
+.cubiertos {
+	height: 30%;
+	width: 100%;
+
+}
+
+.aparejosDeCocina{
+	text-align: center;
+	display: inline;
+}
+
+.aparejosDeCocina li{
+		text-align: center;
+	display: inline-block;
+
 }
 

@@ -92,15 +92,28 @@ function changeModal(recipeObject){
     var myRecipeTitle1=document.getElementById("myRecipeTitle1");
     myRecipeTitle1.innerHTML=recipeObject.title;
 
+    var likeButton2 = document.getElementById("likeButton");
+    likeButton2.addEventListener("click", likeButton.bind(this, recipeObject));
+
+    var likeButton3 =document.getElementById("DislikeButton");
+    likeButton3.addEventListener("click",likeButton.bind(this,recipeObject));  
+
+   document.getElementsByClassName("likeClick")[0].style.display="block";
 };
+
 
 
 /* likeButton function
 
 */
-function likeButton (recipesObject){
-	if (this.id === document.getElementById("likeButton")){
-		recipesObject.like = recipesObject + 1;
+function likeButton (recipesObject,event){
+	console.log(event.target)
+	if (event.target === document.getElementById("likeButton")){
+		recipesObject.like = recipesObject.like + 1;
+		document.getElementsByClassName("likeClick")[0].style.display="none";
+	}else {
+		recipesObject.like = recipesObject.like - 1;
+		document.getElementsByClassName("likeClick")[0].style.display="none";
 
 	}
 }
