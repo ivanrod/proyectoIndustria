@@ -12,6 +12,7 @@
 
 	<script src="./js/jquery-1.10.2.min.js" defer></script>
 	<script src="./js/bootstrap.min.js" defer></script>
+	<script src="./js/syncJsonDownload.js" defer></script>
 	<script src="./js/crearRecetas.js" defer></script>
 
 </head>
@@ -35,45 +36,39 @@
 		 <label class="btn btn-primary disabled">
 		     INGREDIENTES
 		  </label>
-		  <label class="btn btn-primary active">
-		    <input type="radio" name="options" id="option2" checked> Principal
+		  <label id="option2" class="btn btn-primary active">
+		    <input type="radio" name="options"  checked> Principal
 		  </label>
-		  <label class="btn btn-primary">
-		    <input type="radio" name="options" id="option3"> Guarnición
+		  <label id="option3" class="btn btn-primary">
+		    <input type="radio" name="options" > Guarnición
 		  </label>
-		    <label class="btn btn-primary">
-		    <input type="radio" name="options" id="option4"> Salsas
+		    <label id="option4" class="btn btn-primary">
+		    <input type="radio" name="options" > Salsas
 		  </label>
 		</div>
 
-		<div class="btn-group btn-group-justified " data-toggle="buttons">
-		 <label class="btn btn-success active azul">
+		<div id="ingredientType" class="btn-group btn-group-justified " data-toggle="buttons">
+		 <label class="btn btn-success active">
 		    <input type="radio" name="options" checked> Option 1 (preselected)
 		  </label>
-		  <label class="btn btn-success azul">
+		  <label class="btn btn-success">
 		    <input type="radio" name="options"> Option 2
 		  </label>
-		  <label class="btn btn-success azul">
+		  <label class="btn btn-success">
 		    <input type="radio" name="options"> Option 3
 		  </label>
-		    <label class="btn btn-success azul">
+		    <label class="btn btn-success">
 		    <input type="radio" name="options"> Option 4
 		  </label>
 		</div>
 
-		<div class="list-group col-md-3">
+		<div class="list-group col-md-3" id="ingredientKey">
 		  <a href="#" class="list-group-item" data-toggle="tooltip" title="Esta carne viene directamente de Galicia y como todo lo que viene de allí, es buena">Solomillo</a>
-		  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-		  <a href="#" class="list-group-item">Morbi leo risus</a>
-		  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-		  <a href="#" class="list-group-item">Vestibulum at eros</a>
-		  <a href="#" class="list-group-item">Morbi leo risus</a>
-		  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-		  <a href="#" class="list-group-item">Vestibulum at eros</a>
 		</div>
 
 		<div class="col-md-9">
 			<img class="dish" src="./images/plato.jpg" alt="">
+			<canvas id="canvas" width="340" height="340">
 		</div>
 	</section>
 </body>
