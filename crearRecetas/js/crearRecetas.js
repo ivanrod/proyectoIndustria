@@ -12,19 +12,34 @@ var ingredients = JSON.parse(makeCorsRequest("https://dl.dropboxusercontent.com/
 
 function changeIngredientsType(event) {
 
-	var ingredientType = ingredients.Principal;
+	deleteIngredients();
 
+	var ingredientType = ingredients.Principal;
+	var dishIngredient = document.getElementsByClassName("platoPrincipal")[0];
 	if (event !== undefined){
 
-		if (event.target.id === "option2"){ingredientType = ingredients.Principal}
-			else if (event.target.id === "option3"){ingredientType = ingredients.Guarnición}
-				else if (event.target.id === "option4"){ingredientType = ingredients.Salsas}
+		if (event.target.id === "option2"){
+			ingredientType = ingredients.Principal;
+			dishIngredient = document.getElementsByClassName("platoPrincipal")[0];
+		}
+			else if (event.target.id === "option3"){
+				ingredientType = ingredients.Guarnición;
+				dishIngredient = document.getElementsByClassName("guarnicion")[0];
+			}
+				else if (event.target.id === "option4"){
+					ingredientType = ingredients.Salsas;
+					dishIngredient = document.getElementsByClassName("salsas")[0];
+				}
 	};	
 
 	var ingredientsClass = document.getElementsByClassName("btn-success");
 	while (ingredientsClass.length > 0){
 		ingredientsClass[0].remove();
 	}
+
+		dishIngredient.addEventListener('dragover', cancel);
+		dishIngredient.addEventListener('dragenter', cancel); 	
+		dishIngredient.addEventListener('drop', handleDragDrop, false);
 
 	
 	for (var key in ingredientType){
@@ -41,16 +56,14 @@ function changeIngredientsType(event) {
 		label.appendChild(input);	
 		container.appendChild(label);
 
-		label.addEventListener("click", changeIngredients.bind(this, ingredientType, key))	
+		label.addEventListener("click", changeIngredients.bind(this, ingredientType, key,dishIngredient));
+		
 	}
 
 };
 
-function changeIngredients(ingredientType, ingredientKey, event){
-	var ingredientsClass = document.getElementsByClassName("list-group-item");
-	while (ingredientsClass.length > 0){
-		ingredientsClass[0].remove();
-	}	
+function changeIngredients(ingredientType, ingredientKey, dishIngredient, event){
+	deleteIngredients();
 
 	for (var key in ingredientType[ingredientKey]){
 		var container = document.getElementById("ingredientKey");
@@ -60,27 +73,45 @@ function changeIngredients(ingredientType, ingredientKey, event){
 		a.className = 'list-group-item';
 		a.innerHTML = ingredientType[ingredientKey][key];
 
-		container.appendChild(a)
+		container.appendChild(a);
+
+		a.addEventListener('dragstart', handleDragStart.bind(this,dishIngredient), false);
+  		a.addEventListener('dragend', handleDragEnd.bind(this,dishIngredient), false);	
+  		a.addEventListener('drop', handleDragDrop, false);
+
 	}
 }
 
-function drawCanvas() {
-var circle_canvas = document.getElementById("canvas");
-var context = circle_canvas.getContext("2d");
-// Fill Style
-context.fillStyle = "rgba(93,179,199,0.20)";
-// Begin path
-context.beginPath();
-//Canvas shape
-context.arc(225,225,115,0,Math.PI*2,true);
-// Close path
-context.closePath();
-// Fill shape
-context.fill();
-// Draw Image function
-var img = new Image();
-img.src = "./images/plato.jpg";
-img.onload = function() {
-context.drawImage(img, 145, 145);
-      };
+function deleteIngredients(){
+	var ingredientsClass = document.getElementsByClassName("list-group-item");
+	while (ingredientsClass.length > 0){
+		ingredientsClass[0].remove();
+	}	
+}
+
+
+//Drag N Drop event functions
+
+function handleDragStart(dishIngredient, event) {
+  // this / event.target is the current hover target.
+  dishIngredient.classList.add('dishInnOver');
+
+  //event.dataTransfer.effectAllowed = 'move';
+  event.dataTransfer.setData('text/html', event.target.innerHTML);
+}
+
+function handleDragEnd(dishIngredient, event) {
+  dishIngredient.classList.remove('dishInnOver');  // this / e.target is previous target element.
+}
+
+
+function handleDragDrop(event) {
+    event.target.innerHTML = event.dataTransfer.getData('text/html');
+}
+//Function to cancel the dragover and dragenter event
+function cancel(event) {
+  if (event.preventDefault) {
+    event.preventDefault();
+  }
+  return false;
 }

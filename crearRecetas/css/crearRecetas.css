@@ -8,3 +8,25 @@
 .dish{
 	width: 100%;
 }
+.dishInn{
+	position: absolute;
+	height: 10%;
+	width: 15%;
+	text-align: center;
+
+}
+.platoPrincipal{
+	top: 50%;
+	right: 42%;
+}
+.guarnicion{
+	top:20%;
+	right: 20%;
+}
+.salsas{
+	top:20%;
+	left:20%;
+}
+.dishInnOver{
+	border: 2px dashed #000;
+}
