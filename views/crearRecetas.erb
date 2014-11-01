@@ -1,0 +1,172 @@
+<body>
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container">
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><a href="/">Inicio</a></li>
+		    	<li><a href="#">Regístrate</a></li>
+		    	<li><a href="#">Recetas Custom</a></li>
+		    	<li><a href="#">Crea tu receta</a></li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+	<section>
+		<ul class="nav nav-pills nav-justified">
+		  <li class="active">
+		  	<a href="#"><span class="glyphicon glyphicon-cog"></span> Recetas</a>
+		  </li>
+		  <li class="">
+		  	<a href="#" class="">
+		  	<span class="glyphicon glyphicon-ok"></span> Datos de envío</a>
+		  </li>
+		</ul>
+		<div class="page-header">
+			<h1 class="title">Crea tu receta</h1>
+		</div>
+	</section>
+	<section class="newRecipe">
+
+		<div class="btn-group btn-group-justified col-md-4" data-toggle="buttons" >
+		 <label class="btn btn-primary disabled">
+		     INGREDIENTES
+		  </label>
+		  <label id="option2" class="btn btn-primary active">
+		    <input type="radio" name="options"  checked> Principal
+		  </label>
+		  <label id="option3" class="btn btn-primary">
+		    <input type="radio" name="options" > Guarnición
+		  </label>
+		    <label id="option4" class="btn btn-primary">
+		    <input type="radio" name="options" > Salsas
+		  </label>
+		</div>
+
+		<div id="ingredientType" class="btn-group btn-group-justified " data-toggle="buttons">
+		 <label class="btn btn-success active">
+		    <input type="radio" name="options" checked> Option 1 (preselected)
+		  </label>
+		  <label class="btn btn-success">
+		    <input type="radio" name="options"> Option 2
+		  </label>
+		  <label class="btn btn-success">
+		    <input type="radio" name="options"> Option 3
+		  </label>
+		    <label class="btn btn-success">
+		    <input type="radio" name="options"> Option 4
+		  </label>
+		</div>
+
+		<div class="list-group col-md-3" id="ingredientKey">
+		  <a href="#" class="list-group-item" data-toggle="tooltip" title="Esta carne viene directamente de Galicia y como todo lo que viene de allí, es buena">Solomillo</a>
+		</div>
+
+		<div class="col-md-9">
+			<div class="dish">
+				<img class="dish" src="./images/crearRecetas/plato.jpg" alt="" />
+				<div class="dishInn platoPrincipal" draggable="true"><h2>Ingrediente Principal</h2></div>
+				<div class="dishInn guarnicion" draggable="true"><h2>Guarnición</h2></div>
+				<div class="dishInn salsas" draggable="true"><h2>Salsa</h2></div>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		
+	</section>
+	<div class="page-header"> 
+			<h4>Preparación <span class="label label-default">New</span></h4>
+		</div>
+		</div>
+		  	<div class="row">
+		  		<div class="col-md-12 col-md-offset-1">
+				    <div class="form-group col-md-5">
+				      <label for="disabledTextInput">Ingrediente Principal</label>
+				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingrediente principal" disabled>
+				    </div>
+				    
+				    <div class="form-group col-md-5">
+				      <label for="disabledSelect">Método de preparación</label>
+				      <select id="disabledSelect" class="form-control">
+				        <option>Cocción</option>
+				        <option>Al vapor</option>
+				        <option>Freir</option>
+				        <option>Hornear</option>
+				      </select>
+				    </div>
+				</div>
+
+				<div class="col-md-12 col-md-offset-1">
+				    <div class="form-group col-md-5">
+				      <label for="disabledTextInput">Guarnición</label>
+				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Guarnición" disabled>
+				    </div>
+				    
+				    <div class="form-group col-md-5">
+				      <label for="disabledSelect">Método de preparación</label>
+				      <select id="disabledSelect" class="form-control">
+				        <option>Cocción</option>
+				        <option>Al vapor</option>
+				        <option>Freir</option>
+				        <option>Hornear</option>
+				      </select>
+				    </div>
+				</div>
+
+				<div class="col-md-12 col-md-offset-1">
+				    <div class="form-group col-md-5">
+				      <label for="disabledTextInput">Salsa</label>
+				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Salsa" disabled>
+				    </div>
+				    
+				    <div class="form-group col-md-5">
+				      <label for="disabledSelect">Método de preparación</label>
+				      <select id="disabledSelect" class="form-control">
+				        <option>Cocción</option>
+				        <option>Al vapor</option>
+				        <option>Freir</option>
+				        <option>Hornear</option>
+				      </select>
+				    </div>
+				</div>
+		    </div>
+
+	<section>
+		<div class="page-header"> 
+			<h4>Datos de la receta <span class="label label-default">New</span></h4>
+		</div>
+		  	<div class="row">
+		  		<div class="col-md-12 col-md-offset-1">
+				    <div class="form-group col-md-5">
+				      <label for="disabledTextInput">Nombre</label>
+				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre de la receta">
+				    </div>
+				    
+				    <div class="form-group col-md-5">
+				      <label for="disabledSelect">Tipo</label>
+				      <select id="disabledSelect" class="form-control">
+				        <option>Carnivoros</option>
+				        <option>Vegetarianos</option>
+				        <option>Postres</option>
+				      </select>
+				    </div>
+				</div>
+
+			    <div class="form-group col-md-10 col-md-offset-1">
+			      <label for="disabledTextInput">Descripción</label>
+			      <textarea type="text" id="disabledTextInput2" class="form-control" placeholder="Descripción..." rows="5"></textarea>
+			    </div>
+		    </div>
+
+		    <button type="button" class="btn btn-primary col-md-offset-10 btn-save">Guardar</button>
+		   
+	</section>
+
+	<section>
+		<ul class="pager">
+		  <li><a href="#">Previous</a></li>
+		  <li><a href="#">Next</a></li>
+		</ul>
+	</section>
+</body>
+</html>

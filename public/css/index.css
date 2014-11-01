@@ -86,13 +86,14 @@ Temporal*/
 }
 
 .cubiertos {
-	height: 50%;
+	height: 30%;
 	width: 100%;
 
 }
 
 .aparejosDeCocina{
 	text-align: center;
+	display: inline;
 }
 
 .aparejosDeCocina li{
