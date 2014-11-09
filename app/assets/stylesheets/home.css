@@ -1,0 +1,108 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+@media(min-width:768px) {
+    .jumbotronHeader {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }}
+
+ /*Header Section
+ */
+.headerContainer{
+	text-align: center;
+}
+
+/*WeAre Section
+Temporal*/
+.weAre{
+	padding-top: 20px;
+	padding-bottom: 200px;
+}
+
+/*Recipes section
+
+*/
+
+.recipes{
+	padding-top: 20px;
+	
+}
+.utensilios{
+	width: 32%;
+
+	
+}
+.dayRecipes{
+	text-align: center;
+	display: block;
+	margin: auto;
+	width:25%;
+	border: solid;
+	border-radius: 20px;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.thumbnailImg:hover{
+	cursor: pointer;
+}
+/*Modal*/
+
+#myListRecipe {
+	display:inline-block;
+	padding: 0px 0px 50px 40px; 
+}
+
+.timesRecipe {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.makeRecipe {
+	text-align: center;
+}
+
+.likeClick{
+	margin-left: 120px;
+}
+
+.modal-title {
+	text-align: center;
+
+}
+
+.descriptionImage {
+	width: 250px;
+	height: 220px;
+}
+
+/*Contact
+*/
+.contact {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 100px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+
+.cubiertos {
+	height: 50%;
+	width: 100%;
+
+}
+
+.aparejosDeCocina{
+	text-align: center;
+	display: inline;
+}
+
+.aparejosDeCocina li{
+		text-align: center;
+	display: inline-block;
+
+}
+

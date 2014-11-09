@@ -1,0 +1,153 @@
+
+<a href=""></a>
+
+<header id="headerId">
+<!--
+Cabecera de la página. Dos componentes (por el momento):
+	-Una Navbar
+	-Un Jumbotron
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+	  <div class="container">
+		<!--
+		http://getbootstrap.com/css/#overview-container
+		-->
+	    <ul class="nav navbar-nav navbar-right">
+	    	<!-- 
+			Aquí van los botones de la barra de navegación. Las clases funcionan de forma similar a las anteriores dando estilo para su función
+	    	-->
+	    	<li><a href="#" data-target="headerId" class="searchbychar">Inicio</a></li>
+	    	<li><a href="#" data-target="weAreId" class="searchbychar">Quienes Somos</a></li>
+	    	<li><a href="#" data-target="recipesId" class="searchbychar">Recetas</a></li>
+	    	<li><a href="#" data-target="contactId" class="searchbychar">Contacto </a></li>
+	    </ul>
+	  </div>
+
+	</nav>
+
+	<div class="jumbotron jumbotronHeader">
+		<div class="container headerContainer">
+		<!-- 
+		Info sobre el Jumbotron: http://getbootstrap.com/components/#jumbotron
+		-->
+	 		<h1 class="tittleCover">Custom Cook</h1>
+	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae molestiae mollitia delectus consequuntur iure dolorem perferendis accusamus sint esse in, quo corporis explicabo suscipit sunt quibusdam, dolorum minima odio.</p>
+	  		<p><a class="btn btn-primary btn-lg" role="button">Conócenos</a> <%= link_to("Manos a la Obra", {:controller => "recipes", :action => "index"}, {:class => "btn btn-primary btn-lg", :role => "button"}) %> <a class="btn btn-primary btn-lg" role="button">Registrate</a></p>
+		</div>
+	</div>
+
+</header>
+			
+<section id="weAreId" class="weAre">
+	<div><h2 class= "dayRecipes">Quienes somos</h2></div>
+	 <ul class="aparejosDeCocina">
+		<li class= "utensilios"><%= image_tag("/assets/quienesSomos/tenedor.jpg", class: "cubiertos") %><p>Iván Rodriguez</p></li>
+		<li class= "utensilios"><%= image_tag("/assets/quienesSomos/cuchillo.jpg", class: "cubiertos") %><p>Patricia López</p></li>
+		<li class= "utensilios"><%= image_tag("/assets/quienesSomos/cuchara.jpg", class: "cubiertos") %><p>Alvaro González</p></li>
+	</ul>
+
+
+
+
+</section>
+
+<section class="recipes" id="recipesId"></section>
+	<div class="container">
+		<h2 class="dayRecipes"> Recetas del Día</h2>
+		<div class="btn-group btn-group-justified">
+		  <div class="btn-group">
+		    <button id="carnivorosButton" type="button" class="btn btn-default">Carnivoros</button>
+		  </div>
+		  <div class="btn-group">
+		    <button id="vegetarianosButton" type="button" class="btn btn-default">Vegetarianos</button>
+		  </div>
+		  <div class="btn-group">
+		    <button id="golosonesButton" type="button" class="btn btn-default">Golosones</button>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+	  <div class="col-sm-6 col-md-4">
+	    <div id="recipe1" class="thumbnail">
+	      <img class="thumbnailImg" src="" alt="..." data-toggle="modal" data-target="#myModalRecipe1" >
+	      <div class="caption">
+	        <h3>Carnivoros</h3>
+
+
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti placeat optio quod veritatis sint voluptatum officiis. Dolor consequatur nam perspiciatis hic accusantium architecto, quam aspernatur reiciendis, vel animi ea id.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Info</a> <a href="#" class="btn btn-default" role="button">Pedir</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="col-sm-6 col-md-4">
+	    <div id="recipe2" class="thumbnail">
+	      <img class="thumbnailImg" src="" alt="..." data-toggle="modal" data-target="#myModalRecipe1" >
+	      <div class="caption">
+	        <h3>Vegetarianos</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti placeat optio quod veritatis sint voluptatum officiis. Dolor consequatur nam perspiciatis hic accusantium architecto, quam aspernatur reiciendis, vel animi ea id.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Info</a> <a href="#" class="btn btn-default" role="button">Pedir</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="col-sm-6 col-md-4">
+	    <div id="recipe3" class="thumbnail">
+	      <img class="thumbnailImg" src="" alt="..." data-toggle="modal" data-target="#myModalRecipe1" >
+	      <div class="caption">
+	        <h3>Golosones</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti placeat optio quod veritatis sint voluptatum officiis. Dolor consequatur nam perspiciatis hic accusantium architecto, quam aspernatur reiciendis, vel animi ea id.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Info</a> <a href="#" class="btn btn-default" role="button">Pedir</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+<!--Modals-->
+	<div class="modal fade" id="myModalRecipe1" tabindex="-1" role="dialog" aria-labelledby="myRecipeTitle1" aria-hidden="true">
+	  <div class="modal-dialog">
+	    
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h2 class="modal-title" id="myRecipeTitle1">Huevos estrellados</h2>
+	      </div>
+	      <div class="modal-body">
+	        <img  class = "descriptionImage" id = "imgRecipe" src="">
+	        <div id="myListRecipe">
+	        <h3>¿Qué necesitamos?</h3>
+	        <ul id="ingredients">
+
+	        </ul>
+	         </div>
+	       <div  class= "timesRecipe">
+	            <ul class= "row" id="recipeTime">
+	              <li class="col-xs-6 col-md-4"><p>Preparación</p><p>x minutos</p></li>
+	              <li class="col-xs-6 col-md-4"><p>Envío</p><p>x minutos</p></li>
+	              <li class="col-xs-6 col-md-4"><p>Listo para comer</p><p>x minutos</p></li>
+	            </ul>
+	        </div>
+	        <div id="description" class= "makeRecipe">
+	          <h3>¿Cómo se prepara?</h3>
+	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque doloribus vitae voluptas, perferendis perspiciatis consequatur minus blanditiis quasi labore deserunt pariatur velit in natus asperiores aliquid architecto ad repudiandae?</p>
+	       </div>
+	       <div class="likeClick">
+	          <button id="likeButton" type="button" class="btn btn-default btn-lg">
+	              <span class="glyphicon glyphicon-thumbs-up" ></span> Me lo como
+	          </button>
+	          <button id ="DislikeButton" type="button" class="btn btn-default btn-lg">
+	              <span class="glyphicon glyphicon-thumbs-down"></span> No me lo como
+	          </button>
+	       </div>
+			</div>
+		</div>
+	 </div>
+	</div>
+<!--End of Modals-->
+<footer id="contactId" class="contact" role="contentinfo">
+	<p> Copyright <a href="https://github.com/ivanrod/proyectoIndustria"> Custom Cook </a>  &#169;</p>
+</footer>
+
