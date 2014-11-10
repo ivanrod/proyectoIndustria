@@ -1,26 +1,32 @@
 'use strict';
 
-function changeIngredientsType(event) {
 
-	deleteIngredients();
-
-	var ingredientType = ingredients.Principal;
+function triggerIngredient(event){
+	var ingredientType = "Principal";
 	var dishIngredient = document.getElementsByClassName("platoPrincipal")[0];
 	if (event !== undefined){
 
 		if (event.target.id === "option2"){
-			ingredientType = ingredients.Principal;
+			ingredientType = "Principal";
 			dishIngredient = document.getElementsByClassName("platoPrincipal")[0];
 		}
 			else if (event.target.id === "option3"){
-				ingredientType = ingredients.Guarnición;
+				ingredientType = "Guarnición";
 				dishIngredient = document.getElementsByClassName("guarnicion")[0];
 			}
 				else if (event.target.id === "option4"){
-					ingredientType = ingredients.Salsas;
+					ingredientType = "Salsas";
 					dishIngredient = document.getElementsByClassName("salsas")[0];
 				}
-	};	
+	};
+	$.post( "/ingredients", ingredientType, function(data){
+		changeIngredientsType(data, dishIngredient, ingredientType)
+	})			
+}
+
+function changeIngredientsType(ingredients, dishIngredient, ingredientType) {
+
+	deleteIngredients();
 
 	var ingredientsClass = document.getElementsByClassName("btn-success");
 	while (ingredientsClass.length > 0){
@@ -29,10 +35,10 @@ function changeIngredientsType(event) {
 
 		dishIngredient.addEventListener('dragover', cancel);
 		dishIngredient.addEventListener('dragenter', cancel); 	
-		dishIngredient.addEventListener('drop', handleDragDrop, false);
+		dishIngredient.addEventListener('drop', handleDragDrop.bind(this, ingredientType), false);
 
 	
-	for (var key in ingredientType){
+	for (var key in ingredients){
 		var container = document.getElementById("ingredientType");
 
 		var label = document.createElement('label');
@@ -46,7 +52,7 @@ function changeIngredientsType(event) {
 		label.appendChild(input);	
 		container.appendChild(label);
 
-		label.addEventListener("click", changeIngredients.bind(this, ingredientType, key,dishIngredient));
+		label.addEventListener("click", changeIngredients.bind(this, ingredients, key,dishIngredient));
 		
 	}
 
@@ -67,7 +73,7 @@ function changeIngredients(ingredientType, ingredientKey, dishIngredient, event)
 
 		a.addEventListener('dragstart', handleDragStart.bind(this,dishIngredient), false);
   		a.addEventListener('dragend', handleDragEnd.bind(this,dishIngredient), false);	
-  		a.addEventListener('drop', handleDragDrop, false);
+  		//a.addEventListener('drop', handleDragDrop, false);
 
 	}
 }

@@ -163,3 +163,9 @@ Recipe.create(title: "Cocarrois de verdura",
 	img: "/assets/vegetarianos/cocarrois.jpg",
 	description: "En un bol añadir la harina y hacer un hueco en el centro para verter los líquidos (cerveza y aceite), con las manos mezclar bien ambos componentes hasta formar una masa manejable, amasando para que quede firme. Picar a trozos pequeños los ingredientes del relleno y aliñarlos con el aceite y el pimentón antes de meter en la masa.",
 	prep: 17,)
+
+Recipe.all.each do |recipe|
+	RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: Ingredient.all.sample.id)
+	RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: Ingredient.all.sample.id)
+	RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: Ingredient.all.sample.id)
+end

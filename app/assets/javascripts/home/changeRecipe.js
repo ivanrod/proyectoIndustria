@@ -23,26 +23,30 @@ function changeRecipe(recipeId, recipeObject){
 /* threeRecipes function
 Changes the three recipe containers 
 */
-function threeRecipes(event){
+function threeRecipes(data){
+	/*
 	//We initiate recipesType variable with mealRecipes by default
 	var recipesType = mealRecipes;
 	/* If the function is initialized by a Event Listener then 'event' paramenter
 		won't be undefined so we can pick the target id
 	*/
-	
+	/*
 	if (event !== undefined){
 	
 	if (event.target.id === 'carnivorosButton'){recipesType = mealRecipes}
 		else if(event.target.id === 'vegetarianosButton') {recipesType = vegetarianRecipes}
 			else if (event.target.id === 'golosonesButton') {recipesType = dessertRecipes};
-	};
+	};*/
+	var recipesData = data
 	for (var i = 0; i < 3; i++) {
-		changeRecipe('recipe' + (i+1), recipesType[i]) ;
+		changeRecipe('recipe' + (i+1), recipesData[i]) ;
 		};
 	};
 
 
 /*Event listeners*/
+/*
 document.getElementById("carnivorosButton").addEventListener("click", threeRecipes);
 document.getElementById("vegetarianosButton").addEventListener("click", threeRecipes);
 document.getElementById("golosonesButton").addEventListener("click", threeRecipes);
+*/

@@ -14,8 +14,10 @@ function handleDragEnd(dishIngredient, event) {
 }
 
 
-function handleDragDrop(event) {
+function handleDragDrop(dishIngredient,event) {
+  console.log(dishIngredient)
     event.target.innerHTML = event.dataTransfer.getData('text/html');
+    document.getElementById(dishIngredient).setAttribute("value", event.dataTransfer.getData('text/html'))
 }
 //Function to cancel the dragover and dragenter event
 function cancel(event) {

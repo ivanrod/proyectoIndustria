@@ -80,13 +80,13 @@
 		  	<div class="row">
 		  		<div class="col-md-12 col-md-offset-1">
 				    <div class="form-group col-md-5">
-				      <label for="disabledTextInput">Ingrediente Principal</label>
-				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingrediente principal" disabled>
+				      <label for="Principal">Ingrediente Principal</label>
+				      <input type="text" id="Principal" class="form-control Principal" placeholder="Ingrediente principal" disabled>
 				    </div>
 				    
 				    <div class="form-group col-md-5">
-				      <label for="disabledSelect">Método de preparación</label>
-				      <select id="disabledSelect" class="form-control">
+				      <label for="disabledSelect1">Método de preparación</label>
+				      <select id="disabledSelect1" class="form-control">
 				        <option>Cocción</option>
 				        <option>Al vapor</option>
 				        <option>Freir</option>
@@ -97,13 +97,13 @@
 
 				<div class="col-md-12 col-md-offset-1">
 				    <div class="form-group col-md-5">
-				      <label for="disabledTextInput">Guarnición</label>
-				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Guarnición" disabled>
+				      <label for="Guarnición">Guarnición</label>
+				      <input type="text" id="Guarnición" class="form-control Guarnición" placeholder="Guarnición" disabled>
 				    </div>
 				    
 				    <div class="form-group col-md-5">
-				      <label for="disabledSelect">Método de preparación</label>
-				      <select id="disabledSelect" class="form-control">
+				      <label for="disabledSelect2">Método de preparación</label>
+				      <select id="disabledSelect2" class="form-control">
 				        <option>Cocción</option>
 				        <option>Al vapor</option>
 				        <option>Freir</option>
@@ -114,13 +114,13 @@
 
 				<div class="col-md-12 col-md-offset-1">
 				    <div class="form-group col-md-5">
-				      <label for="disabledTextInput">Salsa</label>
-				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Salsa" disabled>
+				      <label for="Salsas">Salsa</label>
+				      <input type="text" id="Salsas" class="form-control Salsa" placeholder="Salsa" disabled>
 				    </div>
 				    
 				    <div class="form-group col-md-5">
-				      <label for="disabledSelect">Método de preparación</label>
-				      <select id="disabledSelect" class="form-control">
+				      <label for="disabledSelect3">Método de preparación</label>
+				      <select id="disabledSelect3" class="form-control">
 				        <option>Cocción</option>
 				        <option>Al vapor</option>
 				        <option>Freir</option>
@@ -130,20 +130,20 @@
 				</div>
 		    </div>
 
-	<section>
+	<section class="dataSection">
 		<div class="page-header"> 
 			<h4>Datos de la receta <span class="label label-default">New</span></h4>
 		</div>
 		  	<div class="row">
 		  		<div class="col-md-12 col-md-offset-1">
 				    <div class="form-group col-md-5">
-				      <label for="disabledTextInput">Nombre</label>
-				      <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre de la receta">
+				      <label for="recipeTitle">Nombre</label>
+				      <input type="text" id="recipeTitle" class="form-control" placeholder="Nombre de la receta">
 				    </div>
 				    
 				    <div class="form-group col-md-5">
-				      <label for="disabledSelect">Tipo</label>
-				      <select id="disabledSelect" class="form-control">
+				      <label for="recipeType">Tipo</label>
+				      <select id="recipeType" class="form-control">
 				        <option>Carnivoros</option>
 				        <option>Vegetarianos</option>
 				        <option>Postres</option>
@@ -152,16 +152,16 @@
 				</div>
 
 			    <div class="form-group col-md-10 col-md-offset-1">
-			      <label for="disabledTextInput">Descripción</label>
-			      <textarea type="text" id="disabledTextInput2" class="form-control" placeholder="Descripción..." rows="5"></textarea>
+			      <label for="recipeDescription">Descripción</label>
+			      <textarea type="text" id="recipeDescription" class="form-control" placeholder="Descripción..." rows="5"></textarea>
 			    </div>
 		    </div>
 
-		    <button type="button" class="btn btn-primary col-md-offset-10 btn-save">Guardar</button>
+		    <button id="saveButton" type="button" class="btn btn-primary col-md-offset-10 btn-save">Guardar</button>
 		   
 	</section>
 
-	<section>
+	<section class="col-md-12">
 		<ul class="pager">
 		  <li><a href="#">Previous</a></li>
 		  <li><a href="#">Next</a></li>

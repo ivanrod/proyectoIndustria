@@ -2,4 +2,5 @@
 // All this logic will automatically be available in application.js.
 //= require recipes/changeIngredients.js
 //= require recipes/dragDrop.js
+//= require recipes/sendRecipe.js
 //= require recipes/crearRecetas.js
