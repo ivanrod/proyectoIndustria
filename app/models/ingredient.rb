@@ -14,4 +14,7 @@ class Ingredient < ActiveRecord::Base
   	end
   	json.to_json
   end
+
+  #
+
 end

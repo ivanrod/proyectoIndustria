@@ -11,6 +11,7 @@ class IngredientsController < ApplicationController
 	def sendIngredients
 		if request.xhr?
 			@ingredients = request.body.read.to_s
+			Recipe.createRecipe(@ingredients)
 			render json: "Ok"
 		else
 			return 'error'

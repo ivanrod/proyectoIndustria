@@ -27,4 +27,32 @@ class Recipe < ActiveRecord::Base
   	return ingArray
   end
 
+  def self.createRecipe(inputJSON)
+    data = JSON.parse!(inputJSON)
+    newRecipe = self.create(title: data["title"],
+      recipeType: translateDish(data["recipeType"]),
+      img: data["img"],
+      description: data["description"],
+      prep: 10)
+    puts data
+    data["ingredients"].each do |ingredient|
+
+      ing = Ingredient.where(name: ingredient["name"])
+      RecipeIngredient.create(ingredient_id: ing[0].id,
+        recipe_id: newRecipe.id
+        )    
+    end
+  end
+
+  def self.translateDish(input)
+    if input == "Carnivoros"
+      output = "mealRecipes"
+    elsif input == "Vegetarianos"
+      output = "vegetarianRecipes"
+    else 
+      output = "dessertRecipes"
+    end
+        
+  end
+
 end

@@ -1,31 +1,34 @@
 'use strict';
 //Sends the recipe data to the server
 
-var jsonRecipe = {
-	"title": document.getElementById("recipeTitle").value,
-	"recipeType": document.getElementById("recipeType").value,
-	"img": "",
-	"description": document.getElementById("recipeDescription").value,
-	"ingredients": 
-		[{
-			"name": document.getElementById("Principal").value,
-			"met": document.getElementById("disabledSelect1").value,
-			"dishType": "Principal"
-		},{
-			"name": document.getElementById("Guarnición").value,
-			"met": document.getElementById("disabledSelect2").value,
-			"dishType": "Guarnición"
-		},{
-			"name": document.getElementById("Salsas").value,
-			"met": document.getElementById("disabledSelect3").value,
-			"dishType": "Salsas"
-		}]
-}
 
+
+//Sends the data to the server in JSON format
 function saveRecipe(){
+	var jsonRecipe = {
+		"title": document.getElementById("recipeTitle").value,
+		"recipeType": document.getElementById("recipeType").value,
+		"img": "/assets/defaultRecipe.gif",
+		"description": document.getElementById("recipeDescription").value,
+		"ingredients": 
+			[{
+				"name": document.getElementById("Principal").value,
+				"met": document.getElementById("disabledSelect1").value,
+				"dishType": "Principal"
+			},{
+				"name": document.getElementById("Guarnición").value,
+				"met": document.getElementById("disabledSelect2").value,
+				"dishType": "Guarnición"
+			},{
+				"name": document.getElementById("Salsas").value,
+				"met": document.getElementById("disabledSelect3").value,
+				"dishType": "Salsas"
+			}]
+	}
 	$.post( "/sendIngredients", JSON.stringify(jsonRecipe), createAlert())	
 }
 
+//Creates an alert wich dissappear in 4 seconds
 function createAlert(){
 	var section = document.getElementsByClassName("dataSection")[0];
 	var div = document.createElement("div");

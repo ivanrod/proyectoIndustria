@@ -33,6 +33,10 @@ function changeModal(recipeObject){
     var myRecipeTitle1=document.getElementById("myRecipeTitle1");
     myRecipeTitle1.innerHTML=recipeObject.title;
 
+    var myRecipeLikes = document.getElementById("likeCounter");
+    parseInt(recipeObject.like);
+    myRecipeLikes.innerHTML = recipeObject.like ;
+
     var likeButton2 = document.getElementById("likeButton");
     likeButton2.addEventListener("click", likeButton.bind(this, recipeObject));
 
