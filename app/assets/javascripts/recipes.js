@@ -4,3 +4,4 @@
 //= require recipes/dragDrop.js
 //= require recipes/sendRecipe.js
 //= require recipes/crearRecetas.js
+//= require recipes/calculatePrize.js

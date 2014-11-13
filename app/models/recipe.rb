@@ -27,6 +27,7 @@ class Recipe < ActiveRecord::Base
   	return ingArray
   end
 
+  #Create a new Recipe with ingredients
   def self.createRecipe(inputJSON)
     data = JSON.parse!(inputJSON)
     newRecipe = self.create(title: data["title"],
@@ -42,6 +43,22 @@ class Recipe < ActiveRecord::Base
         recipe_id: newRecipe.id
         )    
     end
+  end
+
+  def self.allTitles
+    @@titles = []
+    all.each do |recipe|
+      @@titles.push([recipe.title, recipe.getPrize])
+    end
+    @@titles
+  end
+
+  def getPrize
+    @prize=0
+    ingredients.each do |ingredient|
+      @prize += ingredient.prize
+    end
+    @prize
   end
 
   def self.translateDish(input)

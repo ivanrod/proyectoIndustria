@@ -9,36 +9,42 @@
 #Ingredients seeds
 Ingredient.create(name: "Solomillo",
 	ingredientType: "Carnes",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 7)
 Ingredient.create(name: "Bistec",
 	ingredientType: "Carnes",
 	dishType: "Principal")
 Ingredient.create(name: "Entrecot",
 	ingredientType: "Carnes",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 3)
 Ingredient.create(name: "Chuletas",
 	ingredientType: "Carnes",
 	dishType: "Principal")
 
 Ingredient.create(name: "Gallo",
 	ingredientType: "Pescados",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 3)
 Ingredient.create(name: "Lubina",
 	ingredientType: "Pescados",
 	dishType: "Principal")
 Ingredient.create(name: "Bienmesabe",
 	ingredientType: "Pescados",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 4)
 Ingredient.create(name: "Trucha",
 	ingredientType: "Pescados",
 	dishType: "Principal")
 
 Ingredient.create(name: "Judias verdes",
 	ingredientType: "Verduras",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 3)
 Ingredient.create(name: "Brocoli",
 	ingredientType: "Verduras",
-	dishType: "Principal")
+	dishType: "Principal",
+	prize: 6)
 Ingredient.create(name: "Acelgas",
 	ingredientType: "Verduras",
 	dishType: "Principal")
@@ -51,71 +57,88 @@ Ingredient.create(name: "Fritas",
 	dishType: "Guarnición")
 Ingredient.create(name: "Cocidas",
 	ingredientType: "Patatas",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 2)
 Ingredient.create(name: "En puré",
 	ingredientType: "Patatas",
 	dishType: "Guarnición")
 Ingredient.create(name: "Chips",
 	ingredientType: "Patatas",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 3)
 Ingredient.create(name: "Gajo",
 	ingredientType: "Patatas",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 3)
 
 Ingredient.create(name: "César",
 	ingredientType: "Ensalada",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 3)
 Ingredient.create(name: "Mixta",
 	ingredientType: "Ensalada",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 2)
 Ingredient.create(name: "Rosa",
 	ingredientType: "Ensalada",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 4)
 Ingredient.create(name: "Campera",
 	ingredientType: "Ensalada",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 3)
 Ingredient.create(name: "En pasta",
 	ingredientType: "Ensalada",
 	dishType: "Guarnición")
 
 Ingredient.create(name: "Basmati",
 	ingredientType: "Arroces",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 2)
 Ingredient.create(name: "Silvestre",
 	ingredientType: "Arroces",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 7)
 Ingredient.create(name: "Normal",
 	ingredientType: "Arroces",
-	dishType: "Guarnición")
+	dishType: "Guarnición",
+	prize: 2)
 Ingredient.create(name: "Integral",
 	ingredientType: "Arroces",
 	dishType: "Guarnición")
 
 Ingredient.create(name: "Tabasco",
 	ingredientType: "Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 3)
 Ingredient.create(name: "Chile",
 	ingredientType: "Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 1)
 Ingredient.create(name: "Valentina",
 	ingredientType: "Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 3)
 
 Ingredient.create(name: "Tomate",
 	ingredientType: "No Picante",
 	dishType: "Salsas")
 Ingredient.create(name: "Mahonesa",
 	ingredientType: "No Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 6)
 Ingredient.create(name: "Pesto",
 	ingredientType: "No Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 3)
 Ingredient.create(name: "Ali Oli",
 	ingredientType: "No Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 2)
 Ingredient.create(name: "Barbacoa",
 	ingredientType: "No Picante",
-	dishType: "Salsas")
+	dishType: "Salsas",
+	prize: 3)
 
 #Recipes seeds
 Recipe.create(title: "Bizcocho ligero de Chocolate con Mango y Lima ",

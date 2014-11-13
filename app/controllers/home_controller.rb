@@ -13,6 +13,17 @@ class HomeController < ApplicationController
 		end
 	end
 
+	def postLikes
+		if request.xhr?
+			@recipe = JSON.parse!(request.body.read.to_s)
+			Recipe.where(title: @recipe["title"])[0].update_attributes(like: @recipe["like"]) 
+			puts Recipe.where(title: @recipe["title"])[0]
+			render json: @recipe["like"]
+		else
+			return 'error'
+		end
+	end
+
 	def welcome
 	end
 end

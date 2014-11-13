@@ -5,6 +5,20 @@
 
 .newRecipe{
 	/*margin-top: 200px;*/
+	transition: all 2s linear;
+  	display: block;
+}
+
+.newSend{
+	transition: all 2s linear;
+  	display: block;
+}
+
+.hidden{
+  	display: none;
+}
+.visuallyhidden {
+  opacity: 0;
 }
 
 .title{

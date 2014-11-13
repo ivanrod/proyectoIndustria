@@ -34,14 +34,14 @@ function changeModal(recipeObject){
     myRecipeTitle1.innerHTML=recipeObject.title;
 
     var myRecipeLikes = document.getElementById("likeCounter");
-    parseInt(recipeObject.like);
-    myRecipeLikes.innerHTML = recipeObject.like ;
+    var likes = parseInt(recipeObject.like);
+    myRecipeLikes.innerHTML = likes ;
 
     var likeButton2 = document.getElementById("likeButton");
-    likeButton2.addEventListener("click", likeButton.bind(this, recipeObject));
+    likeButton2.addEventListener("click", likeButton.bind(this, recipeObject, likes));
 
     var likeButton3 =document.getElementById("DislikeButton");
-    likeButton3.addEventListener("click",likeButton.bind(this,recipeObject));  
+    likeButton3.addEventListener("click",likeButton.bind(this,recipeObject, likes));  
 
    document.getElementsByClassName("likeClick")[0].style.display="block";
 };

@@ -7,9 +7,14 @@ CustomCook::Application.routes.draw do
   post 'ingredients' => 'ingredients#postJson'
 
   post 'sendIngredients' => 'ingredients#sendIngredients'
+  
+  post '/sendLikes' => 'home#postLikes'
 
   get 'crearRecetas' => 'recipes#index'
-  
+
+  get 'sendRecipes' => 'recipes#sendRecipes'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

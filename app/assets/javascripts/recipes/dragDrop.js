@@ -15,8 +15,7 @@ function handleDragEnd(dishIngredient, event) {
 
 
 function handleDragDrop(dishIngredient,event) {
-  console.log(dishIngredient)
-    event.target.innerHTML = event.dataTransfer.getData('text/html');
+    event.target.innerHTML = event.dataTransfer.getData('text/html') + ' <img src="http://lorempixel.com/100/100/food/" /> ';
     document.getElementById(dishIngredient).setAttribute("value", event.dataTransfer.getData('text/html'))
 }
 //Function to cancel the dragover and dragenter event

@@ -13,10 +13,10 @@
 	</header>
 	<section>
 		<ul class="nav nav-pills nav-justified">
-		  <li class="active">
+		  <li id="recetasPanel" class="active">
 		  	<a href="#"><span class="glyphicon glyphicon-cog"></span> Recetas</a>
 		  </li>
-		  <li class="">
+		  <li  id="envioPanel" class="">
 		  	<a href="#" class="">
 		  	<span class="glyphicon glyphicon-ok"></span> Datos de envío</a>
 		  </li>
@@ -42,7 +42,7 @@
 		  </label>
 		</div>
 
-		<div id="ingredientType" class="btn-group btn-group-justified " data-toggle="buttons">
+		<div id="ingredientType" class="btn-group btn-group-justified col-md-4" data-toggle="buttons">
 		 <label class="btn btn-success active">
 		    <input type="radio" name="options" checked> Option 1 (preselected)
 		  </label>
@@ -71,11 +71,9 @@
 		</div>
 	</section>
 	
-	<section>
-		
-	</section>
-	<div class="page-header"> 
-			<h4>Preparación <span class="label label-default">New</span></h4>
+	<section class="newRecipe">
+	<div> 
+		<h4>Preparación <span class="label label-default">New</span></h4>
 		</div>
 		  	<div class="row">
 		  		<div class="col-md-12 col-md-offset-1">
@@ -129,43 +127,124 @@
 				    </div>
 				</div>
 		    </div>
+	</section>
+	<section class="newRecipe">
+		<article class="dataSection">
+			<div class="page-header"> 
+				<h4>Datos de la receta <span class="label label-default">New</span></h4>
+			</div>
+			  	<div class="row">
+			  		<div class="col-md-12 col-md-offset-1">
+					    <div class="form-group col-md-5">
+					      <label for="recipeTitle">Nombre</label>
+					      <input type="text" id="recipeTitle" class="form-control" placeholder="Nombre de la receta">
+					    </div>
+					    
+					    <div class="form-group col-md-5">
+					      <label for="recipeType">Tipo</label>
+					      <select id="recipeType" class="form-control">
+					        <option>Carnivoros</option>
+					        <option>Vegetarianos</option>
+					        <option>Postres</option>
+					      </select>
+					    </div>
+					</div>
 
-	<section class="dataSection">
-		<div class="page-header"> 
-			<h4>Datos de la receta <span class="label label-default">New</span></h4>
-		</div>
-		  	<div class="row">
-		  		<div class="col-md-12 col-md-offset-1">
-				    <div class="form-group col-md-5">
-				      <label for="recipeTitle">Nombre</label>
-				      <input type="text" id="recipeTitle" class="form-control" placeholder="Nombre de la receta">
+				    <div class="form-group col-md-10 col-md-offset-1">
+				      <label for="recipeDescription">Descripción</label>
+				      <textarea type="text" id="recipeDescription" class="form-control" placeholder="Descripción..." rows="5"></textarea>
 				    </div>
-				    
-				    <div class="form-group col-md-5">
-				      <label for="recipeType">Tipo</label>
-				      <select id="recipeType" class="form-control">
-				        <option>Carnivoros</option>
-				        <option>Vegetarianos</option>
-				        <option>Postres</option>
-				      </select>
-				    </div>
+			    </div>	   
+		</article>
+
+		<article class="col-md-12">
+			<ul class="pager">
+			  <li>
+			  	<button id="saveButton" type="button" class="btn btn-primary btn-save">Guardar y crear otra receta</button></li>
+			  <li>
+			  <button id="saveAndSendButton" type="button" class="btn btn-primary btn-save">Guardar y realizar pedido</button>
+			  <button id="noSaveAndSendButton" type="button" class="btn btn-primary btn-save">Pedir otras recetas</button>
+			  </li>
+			</ul>
+		</article>
+	</section>
+
+	<section class="newSend">
+		<article class="dataSection">
+			<div class="page-header"> 
+				<h4>Datos del pedido <span class="label label-default">New</span></h4>
+			</div>
+			  	<div class="row col-md-offset-4">					    
+					    <div class="form-group col-md-5">
+					      <label for="recipeList">Recetas</label>
+					      <select id="recipeList" class="form-control">
+					        <option class="showList">Carnivoros</option>
+					      </select>
+					    </div>
 				</div>
+				<div class="col-md-5 col-md-offset-5">
+				<button id="addRecipeButton" type="button" class="btn btn-primary btn-save">Añadir receta</button>		
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-5 col-md-offset-3">
+						<table class="table">
+		 					<thead>
+					        <tr>
+					          <th>#</th>
+					          <th>Receta</th>
+					          <th>Precio</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+					       
+					      </tbody>
+					      <tfoot>
+					      	<tr class="info">
+					      		<td>Total</td>
+					      		<td> </td>
+					      		<td id="resultPrice">0 €</td>
+					      	</tr>
+					      </tfoot>
+						</table>
+					</div>
+				</div>
+			    </div>	   
+		</article>
 
-			    <div class="form-group col-md-10 col-md-offset-1">
-			      <label for="recipeDescription">Descripción</label>
-			      <textarea type="text" id="recipeDescription" class="form-control" placeholder="Descripción..." rows="5"></textarea>
-			    </div>
-		    </div>
 
-		    <button id="saveButton" type="button" class="btn btn-primary col-md-offset-10 btn-save">Guardar</button>
-		   
+		<article class="dataSection">
+			<div class="page-header"> 
+				<h4>Datos de envío <span class="label label-default">New</span></h4>
+			</div>
+			  	<div class="row">
+			  		<div class="col-md-12 col-md-offset-1">
+					    <div class="form-group col-md-5">
+					      <label for="clientName">Nombre</label>
+					      <input type="text" id="clientName" class="form-control" placeholder="Tú Nombre">
+					    </div>
+					    
+					    <div class="form-group col-md-5">
+					      <label for="clientDir">Dirección</label>
+					      <input type="text" id="clientDir" class="form-control" placeholder="Tú Dirección">
+					    </div>
+
+					    <div class="form-group col-md-5">
+					      <label for="clientTel">Teléfono</label>
+					      <input type="text" id="clientTel" class="form-control" placeholder="Tú Teléfono">
+					    </div>
+					</div>
+			    </div>	   
+			</article>	
+			<div class="col-md-5 col-md-offset-5">
+			<button id="anotherRecipe" type="button" class="btn btn-primary btn-save">Crear otra receta</button>
+			<button id="makeOrderButton" type="button" class="btn btn-primary btn-save">Realizar pedido</button>
+			</div>	
 	</section>
 
-	<section class="col-md-12">
-		<ul class="pager">
-		  <li><a href="#">Previous</a></li>
-		  <li><a href="#">Next</a></li>
-		</ul>
-	</section>
+<footer id="contactId" class="contact" role="contentinfo">
+	<p> Copyright <a href="https://github.com/ivanrod/proyectoIndustria"> Custom Cook </a>  &#169;</p>
+</footer>
+
+
 </body>
 </html>
