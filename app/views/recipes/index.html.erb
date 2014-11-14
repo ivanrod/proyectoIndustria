@@ -2,11 +2,24 @@
 	<header>
 		<nav class="navbar navbar-default" role="navigation">
 		  <div class="container">
+		  	<% if user_signed_in? %>
+		  	<ul class="nav navbar-nav navbar-left">
+		  	
+		  	<li>Te has identificado como <%= current_user.name %>,
+			<%= link_to("Salir", destroy_user_session_path, method: 'DELETE') %></li>
+			</ul>
+			<% end %>
 		    <ul class="nav navbar-nav navbar-right">
+
+				
 		    	<li><%= link_to("Inicio", root_path) %></li>
-		    	<li><a href="#">Regístrate</a></li>
+		    	
+		  	
+				
+				<% if !user_signed_in? %>
+		    	<li><%= link_to("Regístrate", new_user_registration_path) %></li>
+		    	<% end %>
 		    	<li><a href="#">Recetas Custom</a></li>
-		    	<li><a href="#">Crea tu receta</a></li>
 		    </ul>
 		  </div>
 		</nav>

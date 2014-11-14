@@ -2,21 +2,10 @@
 <a href=""></a>
 
 <header id="headerId">
-<!--
-Cabecera de la página. Dos componentes (por el momento):
-	-Una Navbar
-	-Un Jumbotron
--->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
 	  <div class="container">
-		<!--
-		http://getbootstrap.com/css/#overview-container
-		-->
 	    <ul class="nav navbar-nav navbar-right">
-	    	<!-- 
-			Aquí van los botones de la barra de navegación. Las clases funcionan de forma similar a las anteriores dando estilo para su función
-	    	-->
 	    	<li><a href="#" data-target="headerId" class="searchbychar">Inicio</a></li>
 	    	<li><a href="#" data-target="weAreId" class="searchbychar">Quienes Somos</a></li>
 	    	<li><a href="#" data-target="recipesId" class="searchbychar">Recetas</a></li>
@@ -28,12 +17,9 @@ Cabecera de la página. Dos componentes (por el momento):
 
 	<div class="jumbotron jumbotronHeader">
 		<div class="container headerContainer">
-		<!-- 
-		Info sobre el Jumbotron: http://getbootstrap.com/components/#jumbotron
-		-->
 	 		<h1 class="tittleCover">Custom Cook</h1>
 	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae molestiae mollitia delectus consequuntur iure dolorem perferendis accusamus sint esse in, quo corporis explicabo suscipit sunt quibusdam, dolorum minima odio.</p>
-	  		<p><a class="btn btn-primary btn-lg" role="button">Conócenos</a> <%= link_to("Manos a la Obra", {:controller => "recipes", :action => "index"}, {:class => "btn btn-primary btn-lg", :role => "button"}) %> <a class="btn btn-primary btn-lg" role="button">Registrate</a></p>
+	  		<p><%= link_to("Identifícate", new_user_session_path, :class => "btn btn-primary btn-lg") %> <%= link_to("Manos a la Obra", {:controller => "recipes", :action => "index"}, {:class => "btn btn-primary btn-lg", :role => "button"}) %> <%= link_to("Regístrate", new_user_registration_path, :class => "btn btn-primary btn-lg") %>
 		</div>
 	</div>
 

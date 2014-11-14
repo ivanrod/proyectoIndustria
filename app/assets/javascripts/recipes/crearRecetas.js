@@ -16,6 +16,8 @@ document.getElementById("saveAndSendButton").addEventListener("click", saveRecip
 document.getElementById("saveAndSendButton").addEventListener("click", showSend);
 document.getElementById("noSaveAndSendButton").addEventListener("click", showSend);
 
+document.getElementById("anotherRecipe").addEventListener("click", showRecipe);
+
 
 
 

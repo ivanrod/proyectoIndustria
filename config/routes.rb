@@ -1,5 +1,6 @@
 CustomCook::Application.routes.draw do
 
+  devise_for :users
   root 'home#welcome'
 
   post '/' => 'home#postJson' 
@@ -8,7 +9,7 @@ CustomCook::Application.routes.draw do
 
   post 'sendIngredients' => 'ingredients#sendIngredients'
   
-  post '/sendLikes' => 'home#postLikes'
+  post 'sendLikes' => 'home#postLikes'
 
   get 'crearRecetas' => 'recipes#index'
 
