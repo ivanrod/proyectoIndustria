@@ -19,7 +19,7 @@ class Recipe < ActiveRecord::Base
   	json = json.to_json
   end
 
-  #Get an array with the ingredients names of the recipe
+  #Gets an array with the ingredients names of the recipe
   def getIngredientsNames
   	ingArray = []
   	ingredients.each do |ingredient|
@@ -28,7 +28,7 @@ class Recipe < ActiveRecord::Base
   	return ingArray
   end
 
-  #Create a new Recipe with ingredients
+  #Creates a new Recipe with ingredients
   def self.createRecipe(inputJSON, user)
     data = JSON.parse!(inputJSON)
     if user != "noUser"

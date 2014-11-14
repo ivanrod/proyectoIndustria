@@ -18,8 +18,15 @@
 	<div class="jumbotron jumbotronHeader">
 		<div class="container headerContainer">
 	 		<h1 class="tittleCover">Custom Cook</h1>
-	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae molestiae mollitia delectus consequuntur iure dolorem perferendis accusamus sint esse in, quo corporis explicabo suscipit sunt quibusdam, dolorum minima odio.</p>
-	  		<p><%= link_to("Identifícate", new_user_session_path, :class => "btn btn-primary btn-lg") %> <%= link_to("Manos a la Obra", {:controller => "recipes", :action => "index"}, {:class => "btn btn-primary btn-lg", :role => "button"}) %> <%= link_to("Regístrate", new_user_registration_path, :class => "btn btn-primary btn-lg") %>
+	 		<p>Somos un nuevo sitio web de restauración que prepara al instante platos recién hechos, caseros y a domicilio, utilizando los mejores ingredientes.</p>
+	 		<p>El cliente podrá seleccionar sus ingredientes y la forma de preparación del plato. Además podrá ver como su plato esta siendo cocinado y enviados a través de un reloj y una barra de progreso.</p>
+	 		<% if !user_signed_in? %>
+	  		<p><%= link_to("Identifícate", new_user_session_path, :class => "btn btn-primary btn-lg") %>
+	  		<% end %>
+	  		 <%= link_to("Manos a la Obra", {:controller => "recipes", :action => "index"}, {:class => "btn btn-primary btn-lg", :role => "button"}) %> 
+	  		 <% if !user_signed_in? %>
+	  		 <%= link_to("Regístrate", new_user_registration_path, :class => "btn btn-primary btn-lg") %>
+	  		 <% end %>
 		</div>
 	</div>
 
