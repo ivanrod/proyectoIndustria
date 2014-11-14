@@ -29,13 +29,24 @@ class Recipe < ActiveRecord::Base
   end
 
   #Create a new Recipe with ingredients
-  def self.createRecipe(inputJSON)
+  def self.createRecipe(inputJSON, user)
     data = JSON.parse!(inputJSON)
-    newRecipe = self.create(title: data["title"],
-      recipeType: translateDish(data["recipeType"]),
-      img: data["img"],
-      description: data["description"],
-      prep: 10)
+    if user != "noUser"
+      puts "------"
+      puts user
+      newRecipe = self.create(title: data["title"],
+        recipeType: translateDish(data["recipeType"]),
+        img: data["img"],
+        description: data["description"],
+        prep: 10,
+        user_id: user)
+    else
+      newRecipe = self.create(title: data["title"],
+        recipeType: translateDish(data["recipeType"]),
+        img: data["img"],
+        description: data["description"],
+        prep: 10)
+    end
     puts data
     data["ingredients"].each do |ingredient|
 
@@ -46,6 +57,7 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  #Gets all titles & prize
   def self.allTitles
     @@titles = []
     all.each do |recipe|
@@ -54,6 +66,7 @@ class Recipe < ActiveRecord::Base
     @@titles
   end
 
+  #Gets the prize
   def getPrize
     @prize=0
     ingredients.each do |ingredient|
@@ -62,6 +75,7 @@ class Recipe < ActiveRecord::Base
     @prize
   end
 
+  #Changes the name of the type of the recipe
   def self.translateDish(input)
     if input == "Carnivoros"
       output = "mealRecipes"

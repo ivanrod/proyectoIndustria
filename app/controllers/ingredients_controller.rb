@@ -11,7 +11,11 @@ class IngredientsController < ApplicationController
 	def sendIngredients
 		if request.xhr?
 			@ingredients = request.body.read.to_s
-			Recipe.createRecipe(@ingredients)
+			if user_signed_in?
+				Recipe.createRecipe(@ingredients, current_user.id)
+			else
+				Recipe.createRecipe(@ingredients, "noUser")
+			end
 			render json: "Ok"
 		else
 			return 'error'

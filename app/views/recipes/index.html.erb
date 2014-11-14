@@ -17,9 +17,12 @@
 		  	
 				
 				<% if !user_signed_in? %>
+				<li><%= link_to("Identifícate", new_user_session_path) %> </li>
 		    	<li><%= link_to("Regístrate", new_user_registration_path) %></li>
 		    	<% end %>
-		    	<li><a href="#">Recetas Custom</a></li>
+		    	<% if user_signed_in? %>
+		    	<li><%= link_to("Recetas Custom", user_path) %></li>
+		    	<% end %>
 		    </ul>
 		  </div>
 		</nav>

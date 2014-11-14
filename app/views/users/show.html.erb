@@ -1,0 +1,13 @@
+<h1>Recetas de <%= current_user.name %></h1>
+
+
+<ul class="list-group">
+<% current_user.recipes.all.each do |recipe| %>
+  <li class="list-group-item">
+  	<h4 class="list-group-item-heading"><%=recipe.title%></h4>
+  	<p class="list-group-item-text"><%=recipe.description%></p>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to("Inicio", root_path) %>

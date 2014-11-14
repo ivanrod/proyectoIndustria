@@ -1,6 +1,7 @@
 CustomCook::Application.routes.draw do
 
   devise_for :users
+
   root 'home#welcome'
 
   post '/' => 'home#postJson' 
@@ -14,6 +15,8 @@ CustomCook::Application.routes.draw do
   get 'crearRecetas' => 'recipes#index'
 
   get 'sendRecipes' => 'recipes#sendRecipes'
+
+  get 'user' => 'users#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

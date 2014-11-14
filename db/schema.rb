@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113200438) do
+ActiveRecord::Schema.define(version: 20141114084552) do
 
   create_table "ingredients", force: true do |t|
     t.string   "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20141113200438) do
     t.integer  "prep",        default: 10
     t.integer  "delivery",    default: 10
     t.integer  "like",        default: 0
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
